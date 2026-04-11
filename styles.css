@@ -308,6 +308,8 @@ body {
     letter-spacing: 1px;
     transition: all 0.3s ease;
     box-shadow: 0 8px 20px rgba(255, 107, 53, 0.3);
+    text-decoration: none;
+    display: inline-block;
 }
 
 .download-btn:hover {
