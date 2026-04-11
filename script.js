@@ -291,8 +291,64 @@ loadBookmarkState();
 bookmarkBtn.addEventListener('click', saveBookmarkState);
 
 // ============================================
+// THEME TOGGLE (DARK/LIGHT MODE)
+// ============================================
+
+const themeToggle = document.getElementById('themeToggle');
+const sunIcon = themeToggle.querySelector('.sun-icon');
+const moonIcon = themeToggle.querySelector('.moon-icon');
+const html = document.documentElement;
+
+// Initialize theme from localStorage or system preference
+function initializeTheme() {
+    const savedTheme = localStorage.getItem('theme');
+    
+    if (savedTheme) {
+        setTheme(savedTheme);
+    } else {
+        // Check system preference
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        setTheme(prefersDark ? 'dark' : 'light');
+    }
+}
+
+// Set theme
+function setTheme(theme) {
+    if (theme === 'light') {
+        document.body.classList.add('light-mode');
+        sunIcon.style.display = 'none';
+        moonIcon.style.display = 'block';
+        localStorage.setItem('theme', 'light');
+    } else {
+        document.body.classList.remove('light-mode');
+        sunIcon.style.display = 'block';
+        moonIcon.style.display = 'none';
+        localStorage.setItem('theme', 'dark');
+    }
+}
+
+// Get current theme
+function getCurrentTheme() {
+    return document.body.classList.contains('light-mode') ? 'light' : 'dark';
+}
+
+// Toggle theme
+themeToggle.addEventListener('click', () => {
+    const currentTheme = getCurrentTheme();
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    setTheme(newTheme);
+    showNotification(`Switched to ${newTheme} mode`);
+});
+
+// Initialize theme on page load
+document.addEventListener('DOMContentLoaded', initializeTheme);
+if (document.readyState !== 'loading') {
+    initializeTheme();
+}
+
+// ============================================
 // DEBUG & ANALYTICS
 // ============================================
 
 console.log('STOVE Header Initialized Successfully');
-console.log('Features: Dropdowns, Bookmarks, Smooth Scroll, Keyboard Shortcuts');
+console.log('Features: Dropdowns, Bookmarks, Smooth Scroll, Keyboard Shortcuts, Theme Toggle');
