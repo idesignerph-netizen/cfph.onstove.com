@@ -17,12 +17,37 @@ document.addEventListener('DOMContentLoaded', function () {
             document.querySelectorAll('.dropdown-menu.active').forEach(menu => {
                 if (menu !== dropdownMenu) {
                     menu.classList.remove('active');
+                    // Update ARIA attributes
+                    const relatedButton = document.querySelector(`[data-dropdown="${dropdownType}"]`);
+                    if (relatedButton !== this) {
+                        relatedButton.setAttribute('aria-expanded', 'false');
+                        menu.setAttribute('hidden', '');
+                    }
                 }
             });
             
             // Toggle current menu
             if (dropdownMenu) {
                 dropdownMenu.classList.toggle('active');
+                // Update ARIA attributes
+                const isExpanded = dropdownMenu.classList.contains('active');
+                this.setAttribute('aria-expanded', isExpanded);
+                if (isExpanded) {
+                    dropdownMenu.removeAttribute('hidden');
+                    // Focus first menu item for accessibility
+                    const firstMenuItem = dropdownMenu.querySelector('[role="menuitem"]');
+                    if (firstMenuItem) firstMenuItem.focus();
+                } else {
+                    dropdownMenu.setAttribute('hidden', '');
+                }
+            }
+        });
+        
+        // Keyboard navigation for dropdown
+        button.addEventListener('keydown', function (e) {
+            if (e.key === 'ArrowDown' || e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                this.click();
             }
         });
     });
@@ -32,6 +57,10 @@ document.addEventListener('DOMContentLoaded', function () {
         if (!e.target.closest('.dropdown') && !e.target.closest('[data-dropdown]')) {
             document.querySelectorAll('.dropdown-menu.active').forEach(menu => {
                 menu.classList.remove('active');
+                menu.setAttribute('hidden', '');
+                // Update button aria-expanded
+                const button = document.querySelector(`[aria-controls="${menu.id}"]`);
+                if (button) button.setAttribute('aria-expanded', 'false');
             });
         }
     });
@@ -39,10 +68,41 @@ document.addEventListener('DOMContentLoaded', function () {
     // Close dropdowns when clicking on a dropdown item
     document.querySelectorAll('.dropdown-item').forEach(item => {
         item.addEventListener('click', function (e) {
-            e.preventDefault();
+            // Allow link navigation
             document.querySelectorAll('.dropdown-menu.active').forEach(menu => {
                 menu.classList.remove('active');
+                menu.setAttribute('hidden', '');
+                // Update button aria-expanded
+                const button = document.querySelector(`[aria-controls="${menu.id}"]`);
+                if (button) button.setAttribute('aria-expanded', 'false');
             });
+        });
+    });
+    
+    // Keyboard navigation within dropdown menu
+    document.querySelectorAll('.dropdown-menu').forEach(menu => {
+        menu.addEventListener('keydown', function (e) {
+            const items = Array.from(this.querySelectorAll('[role="menuitem"]'));
+            const currentItem = document.activeElement;
+            
+            if (e.key === 'Escape') {
+                e.preventDefault();
+                const button = document.querySelector(`[aria-controls="${this.id}"]`);
+                if (button) {
+                    button.click();
+                    button.focus();
+                }
+            } else if (e.key === 'ArrowDown') {
+                e.preventDefault();
+                const currentIndex = items.indexOf(currentItem);
+                const nextItem = items[currentIndex + 1] || items[0];
+                nextItem.focus();
+            } else if (e.key === 'ArrowUp') {
+                e.preventDefault();
+                const currentIndex = items.indexOf(currentItem);
+                const prevItem = items[currentIndex - 1] || items[items.length - 1];
+                prevItem.focus();
+            }
         });
     });
 });
