@@ -1,8 +1,69 @@
 // ============================================
+// LOGIN MODAL FUNCTIONALITY
+// ============================================
+
+// Check if user is logged in (using sessionStorage)
+function initializeLoginModal() {
+    const isLoggedIn = sessionStorage.getItem('userLoggedIn');
+    const loginModal = document.getElementById('loginModal');
+    
+    if (!isLoggedIn && loginModal) {
+        // Show login modal on first load
+        loginModal.classList.remove('hidden');
+    } else if (isLoggedIn && loginModal) {
+        // Hide login modal if already logged in
+        loginModal.classList.add('hidden');
+    }
+}
+
+// Handle login form submission
+function setupLoginForm() {
+    const loginForm = document.getElementById('loginForm');
+    
+    if (loginForm) {
+        loginForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values before submission
+            const emailInput = this.querySelector('input[name="email"]');
+            const passwordInput = this.querySelector('input[name="password"]');
+            
+            // Validate inputs
+            if (emailInput.value.trim() && passwordInput.value.trim()) {
+                // Set login state
+                sessionStorage.setItem('userLoggedIn', 'true');
+                sessionStorage.setItem('userEmail', emailInput.value);
+                
+                // Show success notification
+                showNotification('Login successful!');
+                
+                // Hide modal after short delay
+                setTimeout(() => {
+                    const loginModal = document.getElementById('loginModal');
+                    loginModal.classList.add('hidden');
+                }, 800);
+                
+                // Show welcome message
+                console.log('Welcome, ' + emailInput.value + '!');
+                
+                // Reset form
+                this.reset();
+            } else {
+                showNotification('Please enter email and password');
+            }
+        });
+    }
+}
+
+// ============================================
 // DROPDOWN MENU FUNCTIONALITY
 // ============================================
 
 document.addEventListener('DOMContentLoaded', function () {
+    // Initialize login modal
+    initializeLoginModal();
+    setupLoginForm();
+    
     // Initialize dropdowns
     const dropdownButtons = document.querySelectorAll('[data-dropdown]');
     

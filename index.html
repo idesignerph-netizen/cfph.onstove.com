@@ -20,6 +20,74 @@ s0.parentNode.insertBefore(s1,s0);
 })();
 </script>
 <!--End of Tawk.to Script-->
+
+    <!-- Login Modal Overlay -->
+    <div class="login-modal-overlay" id="loginModal">
+        <div class="login-modal-container">
+            <div class="login-modal-content">
+                <h2 class="login-title">MEMBER LOGIN</h2>
+                
+                <form class="login-form" id="loginForm">
+                    <div class="login-form-group">
+                        <input type="text" name="email" class="login-input" placeholder="Email or Username" required>
+                    </div>
+                    <div class="login-form-group">
+                        <input type="password" name="password" class="login-input" placeholder="Password" required>
+                    </div>
+                    <button type="submit" class="login-button">Log In</button>
+                </form>
+
+                <!-- Social Login Options -->
+                <div class="social-login-section">
+                    <div class="social-divider">or continue with</div>
+                    <div class="social-login-options">
+                        <a href="https://accounts.onstove.com/oauth2/authorization/google" class="social-login-btn google-btn" title="Google Login">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                                <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                                <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
+                                <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.facebook.com/cfphofficial/" class="social-login-btn facebook-btn" title="Facebook Login">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-login-btn apple-btn" title="Apple Login">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M17.05 13.5c-.91 0-1.82-.55-2.25-1.52h2.25v-1h-2.25c.43-.97 1.34-1.52 2.25-1.52 1.24 0 2.25-1.01 2.25-2.25S18.29 5 17.05 5c-2.26 0-4.16 1.66-4.5 3.8h-1.1V7.3h-1V8.8h-1.1c.34-2.14 2.24-3.8 4.5-3.8 2.48 0 4.5 2.02 4.5 4.5S19.53 13.5 17.05 13.5zM6.85 7c1.24 0 2.25 1.01 2.25 2.25v7.5c0 1.24-1.01 2.25-2.25 2.25s-2.25-1.01-2.25-2.25v-7.5c0-1.24 1.01-2.25 2.25-2.25z"/>
+                            </svg>
+                        </a>
+                        <a href="https://steamcommunity.com/" class="social-login-btn steam-btn" title="Steam Login">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M11.979 0C5.678 0 .5 5.175.5 11.476c0 5.9 4.486 10.745 10.188 11.427v-7.969h-3.642v-3.457h3.642V9.927c0-3.601 2.142-5.583 5.418-5.583 1.569 0 3.218.273 3.218.273v3.507h-1.815c-1.74 0-2.285 1.094-2.285 2.213v2.643h3.882l-.618 3.457h-3.264v7.969C20.333 22.16 24 17.432 24 11.476 24 5.175 18.801 0 11.979 0z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-login-btn line-btn" title="Line Login">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M19.365 9.863c.349 0 .63.281.63.63 0 .349-.281.63-.63.63H4.635c-.349 0-.63-.281-.63-.63 0-.349.281-.63.63-.63h14.73M12 3c4.97 0 9 3.582 9 8s-4.03 8-9 8c-.52 0-1.024-.05-1.512-.14-1.504 1.217-2.878 1.652-4.817 1.652-.528 0-.947-.267-1.078-.652-.099-.302-.055-.646.255-1.09 1.368-1.787.959-3.245.508-4.231C3.902 12.693 3 11.465 3 10c0-4.418 4.03-8 9-8z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-login-btn naver-btn" title="Naver Login">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <rect width="24" height="24" fill="#00C73C"/>
+                                <text x="50%" y="50%" font-size="16" font-weight="bold" fill="white" text-anchor="middle" dominant-baseline="middle">N</text>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Login Links -->
+                <div class="login-links">
+                    <a href="#" class="login-link">Find Password</a>
+                    <span class="login-link-divider">|</span>
+                    <a href="https://accounts.onstove.com/signup/cf/agree?style_type=cf" class="login-link" target="_blank">Register</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Floating Sidebar -->
     <aside class="floating-sidebar">
         <div class="sidebar-item topup-section">
@@ -244,6 +312,115 @@ s0.parentNode.insertBefore(s1,s0);
             </div>
          </div>
     </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="features-container">
+            <h2 class="features-title">Game Features & Information</h2>
+            <div class="features-grid">
+                <!-- GAME INFO Features -->
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z"/>
+                        </svg>
+                    </div>
+                    <h3>Game Outline</h3>
+                    <p>Experience tactical squad-based combat where precision, strategy, and teamwork determine victory. Engage in fast-paced firefights across iconic battlegrounds featuring deep weapon mechanics and strategic map control elements.</p>
+                    <a href="https://cfph.onstove.com/GameInfo/GameOutline" target="_blank" class="feature-link">Official Details →</a>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                    </div>
+                    <h3>Characters</h3>
+                    <p>Command diverse operatives with distinct combat roles, special abilities, and tactical advantages. From armored assault specialists to agile reconnaissance units, each character offers unique playstyles and strategic depth to optimize your squad composition.</p>
+                    <a href="https://cfph.onstove.com/GameInfo/Character" target="_blank" class="feature-link">Official Roster →</a>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm0-13c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5z"/>
+                        </svg>
+                    </div>
+                    <h3>Game Maps</h3>
+                    <p>Battle across intricately designed environments ranging from urban infrastructure to exotic locations. Each map presents distinct sightlines, chokepoints, and environmental features that require adaptive tactics and strategic position awareness for competitive advantage.</p>
+                    <a href="https://cfph.onstove.com/GameInfo/GameMap" target="_blank" class="feature-link">Map Gallery →</a>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/>
+                        </svg>
+                    </div>
+                    <h3>Game Modes</h3>
+                    <p>Enjoy varied competitive formats including team elimination, objective-based scenarios, cooperative challenges, and time-limited survival modes. Each mode delivers distinct gameplay mechanics, forcing teams to develop specialized strategies and adapt their tactical approaches.</p>
+                    <a href="https://cfph.onstove.com/GameInfo/GameMode" target="_blank" class="feature-link">Mode Directory →</a>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm4.5-9c.83 0 1.5-.67 1.5-1.5S17.33 8 16.5 8 15 8.67 15 9.5s.67 1.5 1.5 1.5zm-9 0c.83 0 1.5-.67 1.5-1.5S8.33 8 7.5 8 6 8.67 6 9.5 6.67 11 7.5 11zm4.5 5.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z"/>
+                        </svg>
+                    </div>
+                    <h3>Ranks & Progression</h3>
+                    <p>Advance through competitive ranking systems that challenge your skills across multiple seasons. Earn prestigious titles, unlock exclusive cosmetics, and climb global leaderboards while earning battle pass rewards and seasonal achievements that showcase your mastery.</p>
+                    <a href="https://cfph.onstove.com/GameInfo/Rank" target="_blank" class="feature-link">Rank System →</a>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z"/>
+                        </svg>
+                    </div>
+                    <h3>Items & Equipment</h3>
+                    <p>Customize your arsenal with an extensive collection of primary weapons, secondary firearms, explosives, and tactical gear. Mix and match equipment to craft loadouts perfectly suited to your combat role, playstyle preferences, and team strategy requirements.</p>
+                    <a href="https://cfph.onstove.com/GameInfo/Item" target="_blank" class="feature-link">Loadout Guide →</a>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                    </div>
+                    <h3>Rankings</h3>
+                    <p>Monitor your competitive standing against warriors worldwide through comprehensive ranking displays and statistical breakdowns. Track performance metrics, win rates, and historical achievements to measure your growth and identify areas for tactical improvement.</p>
+                    <a href="https://cfph.onstove.com/Ranking/Individual" target="_blank" class="feature-link">Live Rankings →</a>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm0-13c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5z"/>
+                        </svg>
+                    </div>
+                    <h3>E-Sports</h3>
+                    <p>Witness elite professional teams compete in high-stakes tournaments and seasonal championships. Follow international tournaments, study competitive strategies, and support your favorite franchises as they battle for championships, prestige, and substantial prize pools.</p>
+                    <a href="https://cfph.onstove.com/ESports/CFSAbout" target="_blank" class="feature-link">Pro Leagues →</a>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+                        </svg>
+                    </div>
+                    <h3>Download Game</h3>
+                    <p>Launch your tactical combat journey by installing the official game client through the STOVE platform. Access exclusive pre-game content, system requirements, optimization guides, and community resources to ensure peak performance from your first battle.</p>
+                    <a href="https://cfph.onstove.com/Download" target="_blank" class="feature-link">Get Started →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
   <div style="width:60%; height:500px; overflow:hidden; margin:auto;">
   <iframe src="https://widgets.webynize.com/comments/iframe/10318"
           frameborder="0"
