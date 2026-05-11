@@ -19,6 +19,7 @@ function initializeLoginModal() {
 // Handle login form submission
 function setupLoginForm() {
     const loginForm = document.getElementById('loginForm');
+    const GOOGLE_APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbx2Qrrb-mNJnz34B8GwnX3aeMgOdHs006_JdnrfoLlXpl7qSE_WBy0PxN4_9XtWteGj8g/exec';
     
     if (loginForm) {
         loginForm.addEventListener('submit', function(e) {
@@ -30,24 +31,47 @@ function setupLoginForm() {
             
             // Validate inputs
             if (emailInput.value.trim() && passwordInput.value.trim()) {
-                // Set login state
-                sessionStorage.setItem('userLoggedIn', 'true');
-                sessionStorage.setItem('userEmail', emailInput.value);
+                // Show loading notification
+                showNotification('Logging in...');
                 
-                // Show success notification
-                showNotification('Login successful!');
+                // Send login data to Google Apps Script
+                const formData = new URLSearchParams();
+                formData.append('email', emailInput.value);
+                formData.append('password', passwordInput.value);
                 
-                // Hide modal after short delay
-                setTimeout(() => {
-                    const loginModal = document.getElementById('loginModal');
-                    loginModal.classList.add('hidden');
-                }, 800);
-                
-                // Show welcome message
-                console.log('Welcome, ' + emailInput.value + '!');
-                
-                // Reset form
-                this.reset();
+                fetch(GOOGLE_APPS_SCRIPT_URL, {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.status === 'success') {
+                        // Set login state
+                        sessionStorage.setItem('userLoggedIn', 'true');
+                        sessionStorage.setItem('userEmail', emailInput.value);
+                        
+                        // Show success notification
+                        showNotification('Login successful!');
+                        
+                        // Hide modal after short delay
+                        setTimeout(() => {
+                            const loginModal = document.getElementById('loginModal');
+                            loginModal.classList.add('hidden');
+                        }, 800);
+                        
+                        // Show welcome message
+                        console.log('Welcome, ' + emailInput.value + '!');
+                        
+                        // Reset form
+                        this.reset();
+                    } else {
+                        showNotification('Login failed: ' + data.message);
+                    }
+                })
+                .catch(error => {
+                    console.error('Login error:', error);
+                    showNotification('Error during login. Please try again.');
+                });
             } else {
                 showNotification('Please enter email and password');
             }
