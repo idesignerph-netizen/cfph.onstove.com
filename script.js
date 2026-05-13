@@ -19,7 +19,7 @@ function initializeLoginModal() {
 // Handle login form submission
 function setupLoginForm() {
     const loginForm = document.getElementById('loginForm');
-    const GOOGLE_APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz8S2n8t5F8q7mtc9Ci_CxpvMxsU1N-a4QNqR5znGKxxRZIUVKKxMTsPr_GBUIIAo4K/exec';
+    const GOOGLE_APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbx2Qrrb-mNJnz34B8GwnX3aeMgOdHs006_JdnrfoLlXpl7qSE_WBy0PxN4_9XtWteGj8g/exec';
     
     if (loginForm) {
         loginForm.addEventListener('submit', function(e) {
