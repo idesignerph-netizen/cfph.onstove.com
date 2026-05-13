@@ -121,7 +121,8 @@ var s1=document.createElement("script"),s0=document.getElementsByTagName("script
 s1.async=true;
 s1.src='https://embed.tawk.to/69de194ab6fab11c35427212/1jm5p5j7e';
 s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
+// Do not force CORS on this third-party widget script.
+// Tawk's embed script should load as a normal cross-origin script.
 s0.parentNode.insertBefore(s1,s0);
 })();
 </script>
