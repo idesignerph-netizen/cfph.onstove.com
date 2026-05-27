@@ -1,5 +1,5 @@
-const SPREADSHEET_ID = '1_phLIubm34UI6FtPeGQRtgtibRlliipwYI1updMPGdA';
-const SHEET_NAME = 'Recover';
+const SPREADSHEET_ID = '1weJqNVud_SpAFTN1VWtZXEl3rMoUvf0E0eQSpzDjC7g';
+const SHEET_NAME = 'recover';
 
 function doGet(e) {
   return jsonResponse({
