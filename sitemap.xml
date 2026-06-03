@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>https://cfph.onstove.com/</loc>
+        <loc>https://cfphonstove.site/</loc>
         <lastmod>2026-05-27</lastmod>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://cfph.onstove.com/Announcement.html</loc>
+        <loc>https://cfphonstove.site/Announcement</loc>
         <lastmod>2026-05-27</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://cfph.onstove.com/Event.html</loc>
+        <loc>https://cfphonstove.site/Event</loc>
         <lastmod>2026-05-27</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://cfph.onstove.com/Policy.html</loc>
+        <loc>https://cfphonstove.site/Policy</loc>
         <lastmod>2026-05-27</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
     <url>
-        <loc>https://cfph.onstove.com/RecoverEmail.html</loc>
+        <loc>https://cfphonstove.site/RecoverEmail</loc>
         <lastmod>2026-05-27</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
