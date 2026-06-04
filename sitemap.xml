@@ -11,21 +11,21 @@
 
   <!-- Optional future pages (add these if they exist) -->
   <url>
-    <loc>https://www.cfphonstove.site/events</loc>
+    <loc>https://www.cfphonstove.site/events.html</loc>
     <lastmod>2026-06-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://www.cfphonstove.site/FAQs</loc>
+    <loc>https://www.cfphonstove.site/FAQs.html</loc>
     <lastmod>2026-06-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
     <url>
-    <loc>https://www.cfphonstove.site/Policy</loc>
+    <loc>https://www.cfphonstove.site/Policy.html</loc>
     <lastmod>2026-06-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
